@@ -1,0 +1,1 @@
+$this->app->register(ModuleServiceProvider::class); 
