@@ -28,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
         } else {
             Debugbar::disable();
         }
+
+        // PayTR Service Provider kaydı
+        $this->app->singleton('paytr', function ($app) {
+            return new \Webkul\Payment\Providers\PayTR();
+        });
     }
 
     /**
